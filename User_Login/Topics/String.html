@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/css.css">
+</head>
+<body>
+<div id="Container">
+  <div id="Header"><img src="../../Logo/Logo.png" alt="Logo" width="103" height="103" title="Logo"/><img id="titile" src="../../Logo/title.png" width="796" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="../welcome.html"><span>Welcome</span></a></li>
+   <li class="active has-sub"><a href="#.html"><span>Account</span></a>
+     <ul>
+       <li class="has-sub"><a href="#.html"><span>Profile</span></a></li>
+        <li class="has-sub"><a href="#.html"><span>Settings</span></a></li>
+    </ul>
+   </li>
+   <li class="active has-sub"><a href="#"><span>Learn C</span></a>
+      <ul>
+         <li class="has-sub"><a href="../Basics.html"><span>Basics</span></a></li>
+         <li class="has-sub"><a href="../Topics.html"><span>Topics</span></a></li>
+         <li class="has-sub"><a href="#.html"><span>Questions</span></a></li>
+      </ul>
+   </li>
+    <li class="last"><a href="../Contacts.html"><span>Contact</span></a></li>
+   <li class="last"><a href="#"><span>Log Out</span></a></li>
+</ul>
+</div>
+  <div id="Content"><h1 style="text-align:center;">String</h1>
+    <ul>
+      <li>C Strings are nothing but array of characters ended with null character (&lsquo;\0&rsquo;).</li>
+      <li>This null character indicates the end of the string.</li>
+      <li>Strings are always enclosed by double quotes. Whereas, character is enclosed by single quotes in C.</li>
+    </ul>
+    <h4><strong>Example for C string:</strong></h4>
+    <ul>
+      <li>char string[20] = {'L','a','n','g','u','a','g','e','T','u','t','o','r', &lsquo;\0&rsquo;}; (or)</li>
+      <li>char string[20] = &ldquo;LanguageTutor&rdquo;; (or)</li>
+      <li>char string [] = &ldquo;LanguageTutor&rdquo;;</li>
+      <li>Difference between above declarations are, when we declare char as &ldquo;string[20]&ldquo;, 20 bytes of memory space is allocated for holding the string value.</li>
+      <li>When we declare char as &ldquo;string[]&rdquo;, memory space will be allocated as per the requirement during execution of the program.</li>
+    </ul>
+    <h4><strong>Example program for C string:</strong></h4><div class="program">#include&lt;stdio.h&gt;
+int main()
+{
+    char string[20] - "sgmlanguagetutor.edu";
+    printf("The string is: %s \n",string);
+    return 0;
+}</div><h4>Output:</h4>
+<div class="output">The string is: sgmlanguagetutor.edu</div>
+<h4><strong>C String functions:</strong></h4>
+<ul>
+  <li>String.h header file supports all the string functions in C language. All the string functions are given below.</li>
+</ul>
+<table width="1000" border="1" align="center" cellpadding="2">
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="1" style="text-align: center"><strong>S.no</strong></td>
+      <td colspan="1" rowspan="1" style="text-align: center"><div><strong>String functions</strong></div></td>
+      <td colspan="1" rowspan="1" style="text-align: center"><div><strong>Description</strong></div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center"><strong>strcat ( )</strong></td>
+      <td> Concatenates str2 at the end of str1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center"><strong>strncat ( )</strong></td>
+      <td> appends a portion of string to another</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center"><strong>strcpy ( )</strong></td>
+      <td> Copies str2 into str1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center"><strong>strncpy ( )</strong></td>
+      <td> copies given number of characters of one string to another</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center"><strong>strlen ( )</strong></td>
+      <td> gives the length of str1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center"><strong>strcmp ( )</strong></td>
+      <td> Returns 0 if str1 is same as str2. Returns &lt;0 if strl &lt; str2. Returns &gt;0 if str1 &gt; str2.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td style="text-align: center"><strong>strcmpi_( )</strong></td>
+      <td> Same as strcmp() function. But, this function negotiates case.  &ldquo;A&rdquo; and &ldquo;a&rdquo; are treated as same.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center"><strong>strchr ( )</strong></td>
+      <td> Returns pointer to first occurrence of char in str1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">9</td>
+      <td style="text-align: center"><strong>strrchr ( )</strong></td>
+      <td> last occurrence of given character in a string is found</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center"><strong>strstr ( )</strong></td>
+      <td> Returns pointer to first occurrence of str2 in str1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11</td>
+      <td style="text-align: center"><strong>strrstr ( )</strong></td>
+      <td> Returns pointer to last occurrence of str2 in str1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">12</td>
+      <td style="text-align: center"><strong>strdup ( )</strong></td>
+      <td> duplicates the string</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">13</td>
+      <td style="text-align: center"><strong>strlwr ( )</strong></td>
+      <td> converts string to lowercase</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">14</td>
+      <td style="text-align: center"><strong>strupr ( )</strong></td>
+      <td> converts string to uppercase</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center"><strong>strrev ( )</strong></td>
+      <td> reverses the given string</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">16</td>
+      <td style="text-align: center"><strong>strset ( )</strong></td>
+      <td> sets all character in a string to given character</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">17</td>
+      <td style="text-align: center"><strong>strnset ( )</strong></td>
+      <td> It sets the portion of characters in a string to given character</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">18</td>
+      <td style="text-align: center"><strong>strtok ( )</strong></td>
+      <td> tokenizing given string using delimiter</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+  <div id="Footer">
+  	<ul>
+    	<li><a href="Arrays.html">&lt;</a></li>
+        <li><a href="PrintfAndScanfFunctions.html">1</a></li>
+        <li><a href="DataTypes.html">2</a></li>
+        <li><a href="Constants.html">3</a></li>
+        <li><a href="Variables.html">4</a></li>
+        <li><a href="OperatorsAndExpressions.html">5</a></li>
+        <li><a href="DecisionControlStatements.html">6</a></li>
+        <li><a href="LoopControlStatements.html">7</a></li>
+        <li><a href="CaseControlStatements.html">8</a></li>
+        <li><a href="Arrays.html">9</a></li>
+        <li><a href="String.html">10</a></li>
+        <li><a href="Pointers.html">11</a></li>
+        <li><a href="Functions.html">12</a></li>
+        <li><a href="Structures.html">13</a></li>
+        <li><a href="Pointers.html">&gt;</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

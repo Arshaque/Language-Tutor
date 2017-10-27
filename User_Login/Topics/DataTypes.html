@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Data Types</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/css.css">
+</head>
+<body>
+<div id="Container">
+  <div id="Header"><img src="../../Logo/Logo.png" alt="Logo" width="103" height="103" title="Logo"/><img id="titile" src="../../Logo/title.png" width="796" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="../welcome.html"><span>Welcome</span></a></li>
+   <li class="active has-sub"><a href="#.html"><span>Account</span></a>
+     <ul>
+       <li class="has-sub"><a href="#.html"><span>Profile</span></a></li>
+        <li class="has-sub"><a href="#.html"><span>Settings</span></a></li>
+    </ul>
+   </li>
+   <li class="active has-sub"><a href="#"><span>Learn C</span></a>
+      <ul>
+         <li class="has-sub"><a href="../Basics.html"><span>Basics</span></a></li>
+         <li class="has-sub"><a href="../Topics.html"><span>Topics</span></a></li>
+         <li class="has-sub"><a href="#.html"><span>Questions</span></a></li>
+      </ul>
+   </li>
+    <li class="last"><a href="../Contacts.html"><span>Contact</span></a></li>
+   <li class="last"><a href="#"><span>Log Out</span></a></li>
+</ul>
+</div>
+  <div id="Content">
+  <h1 style="text-align:center;">Data Type</h1>
+    <ul>
+      <li>C data types are defined as the data storage format that a variable can store a data to perform a specific operation.</li>
+      <li>Data types are used to define a variable before to use in a program.</li>
+      <li>Size of variable, constant and array are determined by data types.</li>
+    </ul>
+    <h4><strong>C – data types:<br>
+    </strong></h4>
+    <p>There are four data types in C language. They are,</p>
+    <table width="500" border="1">
+      <tbody>
+        <tr>
+          <td width="34">S.no</td>
+          <td width="184"><div>Types</div></td>
+          <td width="266"><div>Data Types</div></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Basic data types</td>
+          <td>int, char, float, double</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Enumeration data type</td>
+          <td>enum</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Derived data type</td>
+          <td>pointer, array, structure, union</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Void data type</td>
+          <td>void</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4><strong>1. Basic data types in C:</strong></h4>
+    <h4><strong>1.1. Integer data type:</strong></h4>
+    <ul>
+      <li>Integer data type allows a variable to store numeric values.</li>
+      <li>&ldquo;int&rdquo; keyword is used to refer integer data type.</li>
+      <li>The storage size of int data type is 2 or 4 or 8 byte.</li>
+      <li>It varies depend upon the processor in the CPU that we use.  If we are using 16 bit processor, 2 byte  (16 bit) of memory will be allocated for int data type.</li>
+      <li>Like wise, 4 byte (32 bit) of memory for 32 bit processor and 8 byte (64 bit) of memory for 64 bit processor is allocated for int datatype.</li>
+      <li>int (2 byte) can store values from -32,768 to +32,767</li>
+      <li>int (4 byte) can store values from -2,147,483,648 to +2,147,483,647.</li>
+      <li>If you want to use the integer value that crosses the above limit, you can go for &ldquo;long int&rdquo; and &ldquo;long long int&rdquo; for which the limits are very high.</li>
+    </ul>
+    <p><strong>Note:</strong></p>
+    <ul>
+      <li>We can&rsquo;t store decimal values using int data type.</li>
+      <li>If we use int data type to store decimal values, decimal values will be truncated and we will get only whole number.</li>
+      <li>In this case, float data type can be used to store decimal values in a variable.</li>
+    </ul>
+    <h4><strong>1.2. Character data type:</strong></h4>
+    <ul>
+      <li>Character data type allows a variable to store only one character.</li>
+      <li>Storage size of character data type is 1. We can store only one character using character data type.</li>
+      <li>&ldquo;char&rdquo; keyword is used to refer character data type.</li>
+      <li>For example, &lsquo;A&rsquo; can be stored using char datatype. You can&rsquo;t store more than one character using char data type.</li>
+      <li>Please refer <a title="String" href="String.html">C – Strings</a> topic to know how to store more than one characters in a variable.</li>
+    </ul>
+    <h4><strong>1.3. Floating point data type:</strong></h4>
+    <p>Floating point data type consists of 2 types. They are,</p>
+    <ol>
+      <li>float</li>
+      <li>double</li>
+    </ol>
+    <h4><strong>1. float:</strong></h4>
+    <ul>
+      <li>Float data type allows a variable to store decimal values.</li>
+      <li>Storage size of float data type is 4. This also varies depend upon the processor in the CPU as &ldquo;int&rdquo; data type.</li>
+      <li>We can use up-to 6 digits after decimal using float data type.</li>
+      <li>For example, 10.456789 can be stored in a variable using float data type.</li>
+    </ul>
+    <h4><strong>2. double:</strong></h4>
+    <ul>
+      <li>Double data type is also same as float data type which allows up-to 10 digits after decimal.</li>
+      <li>The range for double datatype is from 1E–37 to 1E+37.</li>
+    </ul>
+    <h4><strong>1.3.1. sizeof() function in C:</strong></h4>
+    <p>sizeof() function is used to find the memory space allocated for each C data types.</p>
+    <h2>Example Program:</h2>
+    <div class="program">#include &lt;stdio.h&gt;
+#include &lt;limits.h&gt;
+int main()
+{
+	int a;
+	char b;
+	float c;
+	double d;
+	printf(&ldquo;Storage size for int data type:%d \n&rdquo;,sizeof(a));
+	printf(&ldquo;Storage size for char data type:%d \n&rdquo;,sizeof(b));
+	printf(&ldquo;Storage size for float data type:%d \n&rdquo;,sizeof(c));
+	printf(&ldquo;Storage size for double data type:%d\n&rdquo;,sizeof(d));
+	return 0;
+}</div>
+    <h2>Output:</h2>
+    <div class="output">Storage size for int data type:4
+Storage size for char data type:1
+Storage size for float data type:4
+Storage size for double data type:8  
+    </div>
+    <h4><strong>1.3.2. Modifiers in C:</strong></h4>
+    <ul>
+      <li>The amount of memory space to be allocated for a variable is derived by modifiers.</li>
+      <li>Modifiers are prefixed with basic data types to modify (either increase or decrease) the amount of storage space allocated to a variable.</li>
+      <li>For example, storage space for int data type is 4 byte for 32 bit processor. We can increase the range by using long int which is 8 byte. We can decrease the range by using short int which is 2 byte.</li>
+    </ul>
+    <ul>
+      <li>There are 5 modifiers available in C language. They are,</li>
+    </ul>
+    <ol>
+      <li>short</li>
+      <li>long</li>
+      <li>signed</li>
+      <li>unsigned</li>
+      <li>long long</li>
+    </ol>
+    <ul>
+      <li>Below table gives the detail about the storage size of each C basic data type in 16 bit processor.<br>
+        Please keep in mind that storage size and range for int and float datatype will vary depend on the CPU processor (8,16, 32 and 64 bit)</li>
+    </ul>
+    <table width="800" border="1">
+      <tbody>
+        <tr>
+          <td width="36">S.No</td>
+          <td width="181">C Data types</td>
+          <td width="107">storage Size</td>
+          <td width="448">Range</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>char</td>
+          <td>1</td>
+          <td>–127 to 127</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>int</td>
+          <td>2</td>
+          <td>–32,767 to 32,767</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>float</td>
+          <td>4</td>
+          <td>1E–37 to 1E+37 with six digits of precision</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>double</td>
+          <td>8</td>
+          <td>1E–37 to 1E+37 with ten digits of precision</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>long double</td>
+          <td>10</td>
+          <td>1E–37 to 1E+37 with ten digits of precision</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>long int</td>
+          <td>4</td>
+          <td>–2,147,483,647 to 2,147,483,647</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>short int</td>
+          <td>2</td>
+          <td>–32,767 to 32,767</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>unsigned short int</td>
+          <td>2</td>
+          <td>0 to 65,535</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>signed short int</td>
+          <td>2</td>
+          <td>–32,767 to 32,767</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>long long int</td>
+          <td>8</td>
+          <td>–(2power(63) –1) to 2(power)63 –1</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>signed long int</td>
+          <td>4</td>
+          <td>–2,147,483,647 to 2,147,483,647</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>unsigned long int</td>
+          <td>4</td>
+          <td>0 to 4,294,967,295</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>unsigned long long int</td>
+          <td>8</td>
+          <td>2(power)64 –1</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4><strong><strong>2. Enumeration data type in C:</strong></strong></h4>
+    <ul>
+      <li>Enumeration data type consists of named integer constants as a list.</li>
+      <li>It start with 0 (zero) by default and value is incremented by 1 for the sequential identifiers in the list.</li>
+    </ul>
+    <ul>
+      <li>Enum syntax in C:</li>
+    </ul>
+    <div class="syntax">enum identifier [optional{ enumerator-list }];</div>
+    <h4><strong>C – enum example program:</strong></h4>
+    <div class="program">#include &lt;stdio.h&gt;
+int main()
+{
+	enum MONTH { Jan = 0, Feb, Mar };
+	enum MONTH month = Mar;
+	if(month == 0)
+		printf(&ldquo;Value of Jan&rdquo;);
+	else if(month == 1)
+		printf(&ldquo;Month is Feb&rdquo;);
+	if(month == 2)
+		printf(&ldquo;Month is Mar&rdquo;);
+}</div>
+    <h2>Output:</h2>
+    <div class="output">Month is March</div>
+    <h4><strong>3. Derived data type in C:</strong></h4>
+    <ul>
+      <li>Array, pointer, structure and union are called derived data type in C language.</li>
+      <li>To know more about derived data types, please visit &ldquo;<a title="Array" href="arrays.html">C – Array</a>&ldquo; , &ldquo;<a title="Pointer" href="Pointers.html">C – Pointer</a>&rdquo; and &ldquo;<a title="Structures" href="Structures.html">C – Structure</a>&rdquo; topics in this tutorial.</li>
+    </ul>
+    <h4><strong>4. Void data type in C:</strong></h4>
+    <ul>
+      <li>Void is an empty data type that has no value.</li>
+      <li>This can be used in functions and pointers.</li>
+      <li>Please visit &ldquo;<a title="Function" href="Functions.html">C – Function</a>&rdquo; topic to know how to use void data type in function with simple call by value and call by reference example programs.</li>
+    </ul>
+  </div>
+  <div id="Footer">
+  	<ul>
+    	<li><a href="PrintfAndScanfFunctions.html"><</a></li>
+        <li><a href="PrintfAndScanfFunctions.html">1</a></li>
+        <li><a href="DataTypes.html">2</a></li>
+        <li><a href="Constants.html">3</a></li>
+        <li><a href="Variables.html">4</a></li>
+        <li><a href="OperatorsAndExpressions.html">5</a></li>
+        <li><a href="DecisionControlStatements.html">6</a></li>
+        <li><a href="LoopControlStatements.html">7</a></li>
+        <li><a href="CaseControlStatements.html">8</a></li>
+        <li><a href="Arrays.html">9</a></li>
+        <li><a href="String.html">10</a></li>
+        <li><a href="Pointers.html">11</a></li>
+        <li><a href="Functions.html">12</a></li>
+        <li><a href="Structures.html">13</a></li>
+        <li><a href="Constants.html">></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

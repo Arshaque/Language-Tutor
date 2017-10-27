@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Variables</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/css.css">
+</head>
+<body>
+<div id="Container">
+  <div id="Header"><img src="../../Logo/Logo.png" alt="Logo" width="103" height="103" title="Logo"/><img id="titile" src="../../Logo/title.png" width="796" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="../welcome.html"><span>Welcome</span></a></li>
+   <li class="active has-sub"><a href="#.html"><span>Account</span></a>
+     <ul>
+       <li class="has-sub"><a href="#.html"><span>Profile</span></a></li>
+        <li class="has-sub"><a href="#.html"><span>Settings</span></a></li>
+    </ul>
+   </li>
+   <li class="active has-sub"><a href="#"><span>Learn C</span></a>
+      <ul>
+         <li class="has-sub"><a href="../Basics.html"><span>Basics</span></a></li>
+         <li class="has-sub"><a href="../Topics.html"><span>Topics</span></a></li>
+         <li class="has-sub"><a href="#.html"><span>Questions</span></a></li>
+      </ul>
+   </li>
+    <li class="last"><a href="../Contacts.html"><span>Contact</span></a></li>
+   <li class="last"><a href="#"><span>Log Out</span></a></li>
+</ul>
+</div>
+  <div id="Content">
+  <h1 style="text-align:center;">Variable</h1>
+  <ul>
+    <li>C variable is a named location in a memory where a program can manipulate the data. This location is used to hold the value of the variable.</li>
+    <li>The value of the C variable may get change in the program.</li>
+    <li>C variable might be belonging to any of the data type like int, float, char etc.</li>
+  </ul>
+  <h4><strong>Rules for naming C variable:</strong></h4>
+  <ol>
+    <li>Variable name must begin with letter or underscore.</li>
+    <li>Variables are case sensitive</li>
+    <li>They can be constructed with digits, letters.</li>
+    <li>No special symbols are allowed other than underscore.</li>
+    <li>sum, height, _value are some examples for variable name</li>
+  </ol>
+  <h4><strong>Declaring &amp; initializing C variable:</strong></h4>
+  <ul>
+    <li>Variables should be declared in the C program before to use.</li>
+    <li>Memory space is not allocated for a variable while declaration. It happens only on variable definition.</li>
+    <li>Variable initialization means assigning a value to the variable.</li>
+  </ul>
+  <table width="900" border="2" cellpadding="3">
+    <tbody>
+      <tr>
+        <td width="40" style="text-align: center"><div><strong>S.No</strong></div></td>
+        <td width="182" style="text-align: center"><div><strong>Type</strong></div></td>
+        <td width="271" style="text-align: center"><div><strong>Syntax</strong></div></td>
+        <td width="361" style="text-align: center"><div><strong>Example</strong></div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>1</div></td>
+        <td><div>Variable declaration</div></td>
+        <td><div>data_type variable_name;</div></td>
+        <td><div>int x, y, z; char flat, ch;</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>2</div></td>
+        <td><div>Variable initialization</div></td>
+        <td><div>data_type variable_name = value;</div></td>
+        <td><div>int x = 50, y = 30; char flag = &lsquo;x&rsquo;, ch=&rsquo;l&rsquo;;</div></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4><strong>There are three types of variables in C program They are,</strong></h4>
+  <ol>
+    <li>Local variable</li>
+    <li>Global variable</li>
+    <li>Environment variable</li>
+  </ol>
+  <h4><strong>1. Example program for local variable in C:</strong></h4>
+  <ul>
+    <li>The scope of local variables will be within the function only.</li>
+    <li>These variables are declared within the function and can&rsquo;t be accessed outside the function.</li>
+    <li>In the below example, m and n variables are having scope within the main function only. These are not visible to test function.</li>
+    <li>Like wise, a and b variables are having scope within the test function only. These are not visible to main function.</li>
+  </ul>
+  <div class="program">#include< stdio.h>
+void test();
+int main()
+{
+	int m = 22, n = 44; 	// m, n are local variables of main function
+	/*m and n variables are having scope within this main function only. These are not visible to test funtion.*/
+	/* If you try to access a and b in this function, you will get ‘a’ undeclared and ‘b’ undeclared error */
+	printf(“\n values : m = %d and n = %d”, m, n);
+	test();
+}
+void test()
+{
+	int a = 50, b = 80;     // a, b are local variables of test function
+	/*a and b variables are having scope within this test function only. These are not visible to main function.*/
+	/* If you try to access m and n in this function, you will get ‘m’ undeclared and ‘n’ undeclared error */
+	printf(“\nvalues : a = %d and b = %d”, a, b);
+}</div>
+<h4>Output:</h4>
+<div class="output">values : m = 22 and n = 44
+values : a = 50 and b = 80</div>
+<h4><strong>2. Example program for global variable in C:</strong></h4>
+<ul>
+  <li>The scope of global variables will be throughout the program. These variables can be accessed from anywhere in the program.</li>
+  <li>This variable is defined outside the main function. So that, this variable is visible to main function and all other sub functions.</li>
+</ul>
+<div class="program">#include< stdio.h>
+void test();
+int m = 22, n = 44;
+int a = 50, b = 80;
+int main()
+{
+	printf(“All variables are accessed from main function”);
+	printf(“\nvalues: m=%d:n=%d:a=%d:b=%d”, m,n,a,b);
+	test();
+}
+void test()
+{
+	printf(“\n\ng All variables are accessed from test function”);
+	printf(“\n values: m=%d:n=%d:a=%d:b=%d”, m,n,a,b);
+}</div>
+<h4>Output:</h4>
+<div class="output">All variables are accessed from main function
+values : m = 22 : n = 44 : a = 50 : b = 80
+
+All variables are accessed from test function
+values : m = 22 : n = 44 : a = 50 : b = 80</div>
+<h4><strong>3. Environment variables in C:</strong></h4>
+<ul>
+  <li>Environment variable is a variable that will be available for all C  applications and C programs.</li>
+  <li>We can access these variables from anywhere in a C program without declaring and initializing in an application or C program.</li>
+  <li>The inbuilt functions which are used to access, modify and set these environment variables are called environment functions.</li>
+</ul>
+<ul>
+  <li>There are 3 functions which are used to access, modify and assign an environment variable in C. They are,</li>
+</ul>
+<p>1. setenv()<br>
+  2. getenv()<br>
+  3. putenv()</p>
+<h4><strong>Example program for getenv() function in C:</strong></h4>
+<p>This function gets the current value of the environment variable. Let us assume that environment variable DIR is assigned to &ldquo;/usr/bin/test/&rdquo;.</p>
+<div class="program">#include< stdio.h>
+#include< stdlib.h>
+int main()
+{
+	printf(“Directory = %s\n”,getenv(“DIR”));
+	return 0;
+}</div>
+<h4>Output:</h4>
+<div class="output">/usr/bin/test/</div>
+<h4> <strong>Example program for setenv() function in C:</strong></h4>
+<p>This function sets the value for environment variable. Let us assume that environment variable &ldquo;FILE&rdquo; is to be assigned &ldquo;/usr/bin/example.c&rdquo;</p>
+<div class="program">#include< stdio.h>
+#include< stdlib.h>
+int main()
+{
+	setenv(“FILE”, “/usr/bin/example.c”,50);
+	printf(“File = %s\n”, getenv(“FILE”));
+	return 0;
+}</div>
+<h4>Output:</h4>
+<div class="output">File = /usr/bin/example.c</div>
+<h4><strong>Example program for putenv() function in C:</strong></h4>
+<p>This function modifies the value for environment variable. Below example program shows that how to modify an existing environment variable value.</p>
+<div class="program">#include< stdio.h>
+#include< stdlib.h>
+int main()
+{
+	setenv(“DIR”, “/usr/bin/example/”,50);
+	printf(“Directory name before modifying = ” \“%s\n”, getenv(“DIR”));
+	putenv(“DIR=/usr/home/”);
+	printf(“Directory name after modifying = ” \“%s\n”, getenv(“DIR”));
+	return 0;
+}
+</div>
+<h4>Output:</h4>
+<div class="output">Directory name before modifying = /usr/bin/example/
+Directory name after modifying = /usr/home/</div>
+<h4><strong>Difference between variable declaration &amp; definition in C:</strong></h4>
+<table width="900" border="1" cellpadding="3">
+  <tbody>
+    <tr>
+      <td><div><strong>S.no </strong></div></td>
+      <td><div><strong>Variable declaration</strong></div></td>
+      <td><div><strong>Variable definition</strong></div></td>
+    </tr>
+    <tr>
+      <td><div>1</div></td>
+      <td><div>Declaration tells the compiler about data type and size of the variable.</div></td>
+      <td><div>Definition allocates memory for the variable.</div></td>
+    </tr>
+    <tr>
+      <td><div>2</div></td>
+      <td><div>Variable can be declared many times in a program.</div></td>
+      <td><div>It can happen only one time for a variable in a program.</div></td>
+    </tr>
+    <tr>
+      <td><div>3</div></td>
+      <td><div>The assignment of properties and identification to a variable.</div></td>
+      <td><div>Assignments of storage space to a variable.</div></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+  <div id="Footer">
+  	<ul>
+    	<li><a href="Constants.html"><</a></li>
+        <li><a href="PrintfAndScanfFunctions.html">1</a></li>
+        <li><a href="DataTypes.html">2</a></li>
+        <li><a href="Constants.html">3</a></li>
+        <li><a href="Variables.html">4</a></li>
+        <li><a href="OperatorsAndExpressions.html">5</a></li>
+        <li><a href="DecisionControlStatements.html">6</a></li>
+        <li><a href="LoopControlStatements.html">7</a></li>
+        <li><a href="CaseControlStatements.html">8</a></li>
+        <li><a href="Arrays.html">9</a></li>
+        <li><a href="String.html">10</a></li>
+        <li><a href="Pointers.html">11</a></li>
+        <li><a href="Functions.html">12</a></li>
+        <li><a href="Structures.html">13</a></li>
+        <li><a href="OperatorsAndExpressions.html">></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

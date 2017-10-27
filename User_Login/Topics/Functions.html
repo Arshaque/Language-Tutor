@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Functions</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/css.css">
+</head>
+<body>
+<div id="Container">
+  <div id="Header"><img src="../../Logo/Logo.png" alt="Logo" width="103" height="103" title="Logo"/><img id="titile" src="../../Logo/title.png" width="796" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="../welcome.html"><span>Welcome</span></a></li>
+   <li class="active has-sub"><a href="#.html"><span>Account</span></a>
+     <ul>
+       <li class="has-sub"><a href="#.html"><span>Profile</span></a></li>
+        <li class="has-sub"><a href="#.html"><span>Settings</span></a></li>
+    </ul>
+   </li>
+   <li class="active has-sub"><a href="#"><span>Learn C</span></a>
+      <ul>
+         <li class="has-sub"><a href="../Basics.html"><span>Basics</span></a></li>
+         <li class="has-sub"><a href="../Topics.html"><span>Topics</span></a></li>
+         <li class="has-sub"><a href="#.html"><span>Questions</span></a></li>
+      </ul>
+   </li>
+    <li class="last"><a href="../Contacts.html"><span>Contact</span></a></li>
+   <li class="last"><a href="#"><span>Log Out</span></a></li>
+</ul>
+</div>
+  <div id="Content"><h1 style="text-align:center;">Functions</h1>
+    <div>
+      <p>C functions are basic building blocks in a program. All C programs are written using functions to improve re-usability, understandability and to keep track on them. </p>
+      <h4><strong>1. What is C function?</strong></h4>
+      <p>     A large C program is divided into basic building blocks called C function. C function contains set of instructions enclosed by &ldquo;{  }&rdquo; which performs specific operation in a C program. Actually, Collection of these functions creates a C program.</p>
+      <h4><strong>2. Uses of C functions:</strong></h4>
+      <ul>
+        <li>C functions are used to avoid rewriting same logic/code again and again in a program.</li>
+        <li>There is no limit in calling C functions to make use of same functionality wherever required.</li>
+        <li>We can call functions any number of times in a program and from any place in a program.</li>
+        <li>A large C program can easily be tracked when it is divided into functions.</li>
+        <li>The core concept of C functions are, re-usability, dividing a big task into small pieces to achieve the functionality and to improve understandability of very large C programs.</li>
+      </ul>
+      <h4><strong>3. C function declaration, function call and function definition:</strong></h4>
+      <p>There are 3 aspects in each C function. They are,</p>
+      <ul>
+        <li>Function declaration or prototype  - This informs compiler about the function name, function parameters and  return value&rsquo;s data type.</li>
+        <li>Function call – This calls the actual function</li>
+        <li>Function definition – This contains all the statements to be executed.</li>
+      </ul>
+      <div>
+        <table width="500" border="1" cellpadding="2">
+          <thead>
+            <tr>
+              <td width="38" style="text-align: center"><strong>S.no</strong></td>
+              <td width="122" style="text-align: center"><strong>C function aspects</strong></td>
+              <td width="324" style="text-align: center"><strong>syntax</strong></td>
+            </tr>
+            <tr>
+              <td style="text-align: center">1</td>
+              <td>function definition</td>
+              <td>return_type function_name ( arguments list )<br>
+                { Body of function; }</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">2</td>
+              <td>function call</td>
+              <td>function_name ( arguments list );</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">3</td>
+              <td>function declaration</td>
+              <td>return_type function_name ( argument list );</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+    <h4><strong>Simple example program for C function:</strong></h4>
+    <ul>
+      <li>As you know, functions should be declared and defined before calling in a C program.</li>
+      <li>In the below program, function &ldquo;square&rdquo; is called from main function.</li>
+      <li>The value of &ldquo;m&rdquo; is passed as argument to the function &ldquo;square&rdquo;. This value is multiplied by itself in this function and multiplied value &ldquo;p&rdquo; is returned to main function from function &ldquo;square&rdquo;.</li>
+    </ul>
+    <div class="program">#include&lt;stdio.h&gt;
+//function prototype, also called funcion declaration
+float square(float x);
+//main function, program starts from here
+int main()
+{
+    float m,n;
+    printf("\n Enter some number for finding square \n);
+    scanf("%f",&amp;m);
+    //function call
+    n-square(m);
+    printf("\n Square of the given number %f is %f",m,n);
+}
+float square(float x) //function definition
+{
+    float p;
+    p-x*x;
+    return(p);
+}</div>
+<h4>Output:</h4>
+<div class="output">Enter some number of finding square
+2
+Square of the given number 2.000000 is 4.000000</div>
+<h4><strong> How to call C functions in a program?</strong></h4>
+<p>There are two ways that a C function can be called from a program. They are,</p>
+<ol>
+  <li>Call by value</li>
+  <li>Call by reference</li>
+</ol>
+<h4><strong>1. Call by value:</strong></h4>
+<div>
+  <ul>
+    <li>In call by value method, the value of the variable is passed to the function as parameter.</li>
+    <li>The value of the actual parameter can not be modified by formal parameter.</li>
+    <li>Different Memory is allocated for both actual and formal parameters. Because, value of actual parameter is copied to formal parameter.</li>
+  </ul>
+  <p>Note:</p>
+  <ul>
+    <li>Actual parameter – This is the argument which is used in function call.</li>
+    <li>Formal parameter – This is the argument which is used in function definition</li>
+  </ul>
+</div>
+<h4><strong>Example program for C function (using call by value):</strong></h4>
+<ul>
+  <li>In this program, the values of the variables &ldquo;m&rdquo; and &ldquo;n&rdquo; are passed to the function &ldquo;swap&rdquo;.</li>
+  <li>These values are copied to formal parameters &ldquo;a&rdquo; and &ldquo;b&rdquo; in swap function and used.</li>
+</ul>
+<div class="program">#include&lt;stdio.h&gt;
+//function prototype, also called function declaration
+void swap(int a, int b);
+int main()
+{
+    int m-22,n-44;
+    //calling swap function by value
+    printf("values before swap m - %d /nand n - %d",m,n);
+    swap(m,n);
+}
+void swap(int a, int b)
+{
+    int tmp;
+    tmp - a;
+    a - b;
+    b - tmp;
+    printf("\n values after swap m - %d\n and n - %d",a,b);
+}</div>
+<h4>Output:</h4>
+<div class="output">Values befor swap m = 22
+and n = 44
+values after swap m = 44
+and n = 22</div>
+<h4><strong>Call by reference:</strong></h4>
+<div>
+  <ul>
+    <li>In call by reference method, the address of the variable is passed to the function as parameter.</li>
+    <li>The value of the actual parameter can be modified by formal parameter.</li>
+    <li>Same memory is used for both actual and formal parameters since only address is used by both parameters.</li>
+  </ul>
+</div>
+<h4><strong>Example program for C function (using call by reference):</strong></h4>
+<ul>
+  <li>In this program, the address of the variables &ldquo;m&rdquo; and &ldquo;n&rdquo; are passed to the function &ldquo;swap&rdquo;.</li>
+  <li>These values are not copied to formal parameters &ldquo;a&rdquo; and &ldquo;b&rdquo; in swap function.</li>
+  <li>Because, they are just holding the address of those variables.</li>
+  <li>This address is used to access and change the values of the variables.</li>
+</ul><div class="program">#include&lt;stdio.h&gt;
+// function prototype, also called function declaration
+void swap(int *a, int *b);
+int main()
+{
+    int m - 22, n - 44;
+    //calling swap function by reference
+    printf("Values before swap m - %d \n and n - %d",m,n);
+    swap(&amp;m, &amp;n);
+}
+void swap(int *a, int *b)
+{
+    int tmp;
+    tmp - *a;
+    *a - *b;
+    *b - tmp;
+    printf("\n values after swap a - %d \nand b - %d", *a,*b);
+}</div><h4>Output:</h4>
+<div class="output">values before swap m = 22
+and n = 44
+values after swap a = 44 
+and b=22</div>
+  </div>
+  <div id="Footer">
+  	<ul>
+    	<li><a href="Pointers.html">&lt;</a></li>
+        <li><a href="PrintfAndScanfFunctions.html">1</a></li>
+        <li><a href="DataTypes.html">2</a></li>
+        <li><a href="Constants.html">3</a></li>
+        <li><a href="Variables.html">4</a></li>
+        <li><a href="OperatorsAndExpressions.html">5</a></li>
+        <li><a href="DecisionControlStatements.html">6</a></li>
+        <li><a href="LoopControlStatements.html">7</a></li>
+        <li><a href="CaseControlStatements.html">8</a></li>
+        <li><a href="Arrays.html">9</a></li>
+        <li><a href="String.html">10</a></li>
+        <li><a href="Pointers.html">11</a></li>
+        <li><a href="Functions.html">12</a></li>
+        <li><a href="Structures.html">13</a></li>
+        <li><a href="Structures.html">&gt;</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

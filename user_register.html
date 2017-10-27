@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Register</title>
+<link rel="stylesheet" type="text/css" href="CSS/registration.css">
+<script>
+	function enablespecify()
+	{
+		document.getElementById("Specify2").disabled=false;
+		document.getElementById("Specify2").required=true;
+	}
+	function disablespecify()
+	{
+		document.getElementById("Specify2").disabled=true;
+		document.getElementById("Specify2").value="";
+		document.getElementById("Specify2").required=false;
+	}
+	
+	function verifypassword()
+	{
+		var a=document.getElementById("password1").value;
+		var b=document.getElementById("password2").value;
+		if(a.length <8)
+		{
+			alert("password should be minimum 8 characters.");
+			form.password1.focus();
+			return false;
+		}
+		if(a != b)
+		{
+			alert("password doesn't match");
+			return false;
+		}
+		return false;
+	}
+	
+</script>
+</head>
+
+<body>
+<div id="Container">
+  <div id="Header"><img src="Logo/Logo.png" alt="Logo" width="100" height="105" title="Logo"/><img id="titile" src="Logo/title.png" width="800" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="home.html"><span>Home</span></a></li>
+   <li class="active has-sub"><a href="Admin_Login.html"><span>Admin Login</span></a></li>
+   <li class="active has-sub"><a href="#"><span>User</span></a>
+      <ul>
+         <li class="has-sub"><a href="user_login.html"><span>login</span></a></li>
+         <li class="has-sub"><a href="user_register.html"><span>Register</span></a></li>
+      </ul>
+   </li>
+   <li class="last"><a href="Contact.html"><span>Contact</span></a></li>
+</ul>
+</div>
+  <div id="Content">
+    <h2 id="subtitle">User Register</h2>
+    <form tag="Create_logon">
+   	  <div align="center">
+   	    <table width="100%" height="445" border="0" cellpadding="5">
+   	      <tbody>
+   	        <tr>
+   	          <td width="498" style="text-align: right"><label for="username">User Name:</label></td>
+   	          <td width="547" style="text-align: left"><input class="textbar" name="username" type="text" autofocus required id="username"></td>
+            </tr>
+   	        <tr>
+   	          <td height="42" style="text-align: right"><label for="email3">Email:</label></td>
+   	          <td style="text-align: left"><input  class="textbar" name="email" type="email" required id="email3"></td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><label for="userID3">User Id:</label></td>
+   	          <td style="text-align: left"><input class="textbar" name="userID" type="text" required id="userID3"></td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><label for="password1">Password:</label></td>
+   	          <td style="text-align: left"><input name="password1" type="password" autofocus required  class="textbar" id="password1" >
+   	            <input name="showpassword1" type="checkbox" id="showpassword1" title="showpassword1" value="showpassword" onChange="document.getElementById('password1').type = this.checked ? 'text' : 'password';">
+   	            Show Password</td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><label for="password2">Retype  Password:</label></td>
+   	          <td style="text-align: left"><input name="password2" type="password" autofocus required class="textbar" id="password2">
+              <input name="showpassword2" type="checkbox" id="showpassword2" title="showpassword2" value="showpassword" onChange="document.getElementById('password2').type = this.checked ? 'text':'password';">Show Password
+              </td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><label for="dob2">Date of Birth</label></td>
+   	          <td style="text-align: left"><input class="textbar" name="dob" type="date" required id="dob2"></td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><label>Gender:
+              </label></td>
+   	          <td style="text-align: left"><label>
+   	            <input name="Gender" type="radio" id="Gender_0" value="Male">
+   	            Male</label>
+                <label>
+                  <input name="Gender" type="radio" id="Gender_1" value="Female">
+              Female</label></td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><label for="mobile1">Mobile:</label></td>
+   	          <td style="text-align: left"><input class="textbar" name="mobile" type="tel" required id="mobile1" maxlength="10"></td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><p>
+                  <label>Who are you: </label>
+              </p></td>
+   	          <td style="text-align: left"><label>
+   	            <input name="WhatAreYou" type="radio" id="WhatAreYou_0" value="Student" onFocus="disablespecify()">
+   	            Student</label>
+                <label>
+                  <input name="WhatAreYou" type="radio" id="WhatAreYou_1" onFocus="disablespecify()" value="Employee">
+                  Employee</label>
+                <label>
+                  <input name="WhatAreYou" type="radio" id="WhatAreYou_2" onFocus="disablespecify()" value="Bussiness">
+                  Bussiness</label>
+                <label>
+                  <input name="WhatAreYou" type="radio" id="WhatAreYou_3" onFocus="enablespecify()" value="Others">
+              Others</label></td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right"><label for="Specify2">Specify(<span style="font-weight: normal">If Others</span>):</label></td>
+   	          <td style="text-align: left"><textarea  class="textbar" name="Specify" rows="1" maxlength="20" disabled="disabled" wrap="soft" id="Specify2" title="Specify"></textarea></td>
+            </tr>
+   	        <tr>
+   	          <td style="text-align: right">
+   	            <input class="buttons" name="Reset" type="reset" id="Reset" title="Reset" value="Reset">
+   	            <span style="text-align: right"></span></td>
+   	          <td style="text-align: left">
+   	            <span style="text-align: left"></span>
+   	            <input class="buttons" name="SignUp" type="submit" id="SignUp" formmethod="post" title="SignUp" value="Sign Up" onClick="verifypassword()">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+    <div id="Footer">Content for  id "Footer"
+	</div>
+</div>
+</body>
+</html>

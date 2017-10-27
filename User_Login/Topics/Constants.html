@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Constants</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/css.css">
+</head>
+<body>
+<div id="Container">
+  <div id="Header"><img src="../../Logo/Logo.png" alt="Logo" width="103" height="103" title="Logo"/><img id="titile" src="../../Logo/title.png" width="796" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="../welcome.html"><span>Welcome</span></a></li>
+   <li class="active has-sub"><a href="#.html"><span>Account</span></a>
+     <ul>
+       <li class="has-sub"><a href="#.html"><span>Profile</span></a></li>
+        <li class="has-sub"><a href="#.html"><span>Settings</span></a></li>
+    </ul>
+   </li>
+   <li class="active has-sub"><a href="#"><span>Learn C</span></a>
+      <ul>
+         <li class="has-sub"><a href="../Basics.html"><span>Basics</span></a></li>
+         <li class="has-sub"><a href="../Topics.html"><span>Topics</span></a></li>
+         <li class="has-sub"><a href="#.html"><span>Questions</span></a></li>
+      </ul>
+   </li>
+    <li class="last"><a href="../Contacts.html"><span>Contact</span></a></li>
+   <li class="last"><a href="#"><span>Log Out</span></a></li>
+</ul>
+</div>
+  <div id="Content">
+  	<h1 style="text-align:center;">Constant</h1>
+  	<ul>
+  	  <li>C Constants are also like normal variables. But, only difference is, their values can not be modified by the program once they are defined.</li>
+  	  <li>Constants refer to fixed values. They are also called as literals</li>
+  	  <li>Constants may be belonging to any of the data type.</li>
+    </ul>
+  	
+  	  <h4>Syntax:</h4>
+   
+  	<p class="syntax">const data_type variable_name; 
+   	 (or)
+const data_type *variable_name;</p>
+  	<h4><strong>Types of C constant:</strong></h4>
+<ol type="1">
+  	  <li>Integer constants</li>
+  	  <li>Real or Floating point constants</li>
+  	  <li>Octal &amp; Hexadecimal constants</li>
+  	  <li>Character constants</li>
+  	  <li>String constants</li>
+  	  <li>Backslash character constants</li>
+    </ol>
+  	<table width="800" border="1" cellpadding="2">
+  	  <tbody>
+  	    <tr>
+  	      <td width="34" style="text-align: center">S.no</td>
+  	      <td width="262" style="text-align: center"><div>Constant type</div></td>
+  	      <td width="133" style="text-align: center"><div>data type</div></td>
+  	      <td width="335" style="text-align: center"><div>Example</div></td>
+        </tr>
+  	    <tr>
+  	      <td style="text-align: center">1</td>
+  	      <td>Integer constants</td>
+  	      <td>int<br>
+  	        unsigned int<br>
+  	        long int<br>
+  	        long long int</td>
+  	      <td>53, 762, -478 etc <br>
+  	        5000u, 1000U etc<br>
+  	        483,647<br>
+  	        2,147,483,680</td>
+        </tr>
+  	    <tr>
+  	      <td style="text-align: center">2</td>
+  	      <td>Real or Floating point constants</td>
+  	      <td>float<br>
+  	        doule</td>
+  	      <td>10.456789<br>
+  	        600.123456789</td>
+        </tr>
+  	    <tr>
+  	      <td style="text-align: center">3</td>
+  	      <td>Octal constant</td>
+  	      <td>int</td>
+  	      <td>013          /* starts with 0  */</td>
+        </tr>
+  	    <tr>
+  	      <td style="text-align: center">4</td>
+  	      <td>Hexadecimal constant</td>
+  	      <td>int</td>
+  	      <td>0×90        /* starts with 0x */</td>
+        </tr>
+  	    <tr>
+  	      <td style="text-align: center">5</td>
+  	      <td>character constants</td>
+  	      <td><div>char</div></td>
+  	      <td>&lsquo;A&rsquo;   ,   &lsquo;B&rsquo;,     &lsquo;C&rsquo;</td>
+        </tr>
+  	    <tr>
+  	      <td style="text-align: center">6</td>
+  	      <td>string constants</td>
+  	      <td><div>char</div></td>
+  	      <td>&ldquo;ABCD&rdquo;   ,   &ldquo;Hai&rdquo;</td>
+        </tr>
+      </tbody>
+    </table>
+  	<h4><strong>Rules for constructing C constant:</strong></h4>
+  	<h4><strong>1. Integer Constants in C:</strong></h4>
+  	<ul>
+  	  <li>An integer constant must have at least one digit.</li>
+  	  <li>It must not have a decimal point.</li>
+  	  <li>It can either be positive or negative.</li>
+  	  <li>No commas or blanks are allowed within an integer constant.</li>
+  	  <li>If no sign precedes an integer constant, it is assumed to be positive.</li>
+  	  <li>The allowable range for integer constants is -32768 to 32767.</li>
+    </ul>
+  	<h4><strong>2. Real constants in C:</strong></h4>
+  	<ul>
+  	  <li>A real constant must have at least one digit</li>
+  	  <li>It must have a decimal point</li>
+  	  <li>It could be either positive or negative</li>
+  	  <li>If no sign precedes an integer constant, it is assumed to be positive.</li>
+  	  <li>No commas or blanks are allowed within a real constant.</li>
+    </ul>
+  	<h4><strong>3. Character and string constants in C:</strong></h4>
+  	<ul>
+  	  <li>A character constant is a single alphabet, a single digit or a single special symbol enclosed within single quotes.</li>
+  	  <li>The maximum length of a character constant is 1 character.</li>
+  	  <li>String constants are  enclosed within double quotes.</li>
+    </ul>
+  	<h4><strong>4. Backslash Character Constants in C:</strong></h4>
+  	<ul>
+  	  <li>There are some characters which have special meaning in C language.</li>
+  	  <li>They should be preceded by backslash symbol to make use of special function of them.</li>
+  	  <li>Given below is the list of special characters and their purpose.</li>
+    </ul>
+  	<div>
+  	  <table width="500" border="2" cellpadding="2">
+  	    <tbody>
+  	      <tr style="font-weight: bold; text-align: center;">
+  	        <td>Backslash_character</td>
+  	        <td>Meaning</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\b</td>
+  	        <td style="text-align: left">Backspace</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\f</td>
+  	        <td style="text-align: left">Form feed</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\n</td>
+  	        <td style="text-align: left">New line</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\r</td>
+  	        <td style="text-align: left">Carriage return</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\t</td>
+  	        <td style="text-align: left">Horizontal tab</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\&rdquo;</td>
+  	        <td style="text-align: left">Double quote</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\&rsquo;</td>
+  	        <td style="text-align: left">Single quote</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\\</td>
+  	        <td style="text-align: left">Backslash</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\v</td>
+  	        <td style="text-align: left">Vertical tab</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\a</td>
+  	        <td style="text-align: left">Alert or bell</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\?</td>
+  	        <td style="text-align: left">Question mark</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\N</td>
+  	        <td style="text-align: left">Octal constant (N is an octal constant)</td>
+          </tr>
+  	      <tr>
+  	        <td style="text-align: center">\XN</td>
+  	        <td style="text-align: left">Hexadecimal constant (N – hex.dcml cnst)</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+  	<div>
+  	  <h4><strong>How to use constants in a C program?</strong></h4>
+  	  <ul>
+  	    <li>We can define constants in a C program in the following ways.</li>
+      </ul>
+  	  <ol>
+  	    <li>By &ldquo;const&rdquo; keyword</li>
+  	    <li>By &ldquo;#define&rdquo; preprocessor directive</li>
+      </ol>
+  	  <ul>
+  	    <li>Please note that when you try to change constant values after defining in C program, it will through error.</li>
+      </ul>
+  	  <h4><strong>1. Example program using const keyword in C:</strong></h4>
+    </div>
+  	<div class="program">#inlcude&lt;stdio.h&gt;
+void main()
+{
+	const int height = 100;            			/*int constant*/
+	const float number = 3.14;   				/*Real constant*/
+	const char letter = ‘A’;          			/*char constant*/
+	const char letter_sequence[10] = “ABC”;         	/*string constant*/
+	const char backslash_char = ‘\?’;               	/*special char cnst*/
+	printf(“value of height :%d \n”, height );
+	printf(“value of number : %f \n”, number );
+	printf(“value of letter : %c \n”, letter );
+	printf(“value of letter_sequence : %s \n”, letter_sequence);
+	printf(“value of backslash_char : %c \n”, backslash_char);
+}</div>
+    <h4><strong>Output:</strong></h4>
+    <div class="output">value of height : 100
+value of number : 3.140000
+value of letter : A
+value of letter_sequence : ABC
+value of backslash_char : ? </div>
+    <h4><strong>2. Example program using #define preprocessor directive in C:</strong></h4>
+    <div class="program">#define height 100
+#define number 3.14
+#define letter ‘A’
+#define letter_sequence “ABC”
+#define backslash_char ‘\?’
+void main()
+{
+	printf(“value of height : %d \n”, height );
+	printf(“value of number : %f \n”, number );
+	printf(“value of letter : %c \n”, letter );
+	printf(“value of letter_sequence : %s \n”,letter_sequence);
+	printf(“value of backslash_char : %c \n”,backslash_char);
+}</div>
+    <h4><strong>Output:</strong></h4>
+<div class="output">value of height : 100
+value of number : 3.140000
+value of letter : A
+value of letter_sequence : ABC
+value of backslash_char : ?</div>
+  </div>
+  
+  <div id="Footer">
+  	<ul>
+    	<li><a href="DataTypes.html"><</a></li>
+        <li><a href="PrintfAndScanfFunctions.html">1</a></li>
+        <li><a href="DataTypes.html">2</a></li>
+        <li><a href="Constants.html">3</a></li>
+        <li><a href="Variables.html">4</a></li>
+        <li><a href="OperatorsAndExpressions.html">5</a></li>
+        <li><a href="DecisionControlStatements.html">6</a></li>
+        <li><a href="LoopControlStatements.html">7</a></li>
+        <li><a href="CaseControlStatements.html">8</a></li>
+        <li><a href="Arrays.html">9</a></li>
+        <li><a href="String.html">10</a></li>
+        <li><a href="Pointers.html">11</a></li>
+        <li><a href="Functions.html">12</a></li>
+        <li><a href="Structures.html">13</a></li>
+        <li><a href="Variables.html">></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,730 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Operators And Expressions</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/css.css">
+</head>
+<body>
+<div id="Container">
+  <div id="Header"><img src="../../Logo/Logo.png" alt="Logo" width="103" height="103" title="Logo"/><img id="titile" src="../../Logo/title.png" width="796" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="../welcome.html"><span>Welcome</span></a></li>
+   <li class="active has-sub"><a href="#.html"><span>Account</span></a>
+     <ul>
+       <li class="has-sub"><a href="#.html"><span>Profile</span></a></li>
+        <li class="has-sub"><a href="#.html"><span>Settings</span></a></li>
+    </ul>
+   </li>
+   <li class="active has-sub"><a href="#"><span>Learn C</span></a>
+      <ul>
+         <li class="has-sub"><a href="../Basics.html"><span>Basics</span></a></li>
+         <li class="has-sub"><a href="../Topics.html"><span>Topics</span></a></li>
+         <li class="has-sub"><a href="#.html"><span>Questions</span></a></li>
+      </ul>
+   </li>
+    <li class="last"><a href="../Contacts.html"><span>Contact</span></a></li>
+   <li class="last"><a href="#"><span>Log Out</span></a></li>
+</ul>
+</div>
+  <div id="Content"><h1 style="text-align:center;">Operators And Expressions</h1>
+    <ul>
+      <li>The symbols which are used to perform logical and mathematical operations in a C program are called C operators.</li>
+      <li>These C operators join individual constants and variables to form expressions.</li>
+      <li>Operators, functions, constants and variables are combined together to form expressions.</li>
+      <li>Consider the expression A + B * 5. where, +, * are operators, A, B  are variables, 5 is constant and A + B * 5 is an expression.</li>
+    </ul>
+    <h4><strong>Types of C operators:</strong></h4>
+    <p>C language offers many types of operators. They are,</p>
+    <ol start="1" type="1">
+      <li>Arithmetic operators</li>
+      <li>Assignment operators</li>
+      <li>Relational operators</li>
+      <li>Logical operators</li>
+      <li>Bit wise operators</li>
+      <li>Conditional operators (ternary operators)</li>
+      <li>Increment/decrement operators</li>
+      <li>Special operators</li>
+    </ol>
+    <table width="900" border="1" cellpadding="4">
+      <tbody>
+        <tr>
+          <td width="38" style="text-align: center"><div><strong>S.no</strong></div></td>
+          <td width="200" style="text-align: center"><div><strong>Types of Operators</strong></div></td>
+          <td width="622" style="text-align: center"><div><strong>Description</strong></div></td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>1</div></td>
+          <td style="text-align: left"><strong>Arithmetic_operators</strong></td>
+          <td style="text-align: justify">These are used to perform mathematical calculations like addition, subtraction, multiplication, division and modulus</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>2</div></td>
+          <td style="text-align: left"><strong>Assignment_operators</strong></td>
+          <td style="text-align: justify">These are used to assign the values for the variables in C programs.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>3</div></td>
+          <td style="text-align: left"><strong>Relational operators</strong></td>
+          <td style="text-align: justify">These operators are used to compare the value of two variables.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>4</div></td>
+          <td style="text-align: left"><strong>Logical operators</strong></td>
+          <td style="text-align: justify">These operators are used to perform logical operations on the given two variables.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>5</div></td>
+          <td style="text-align: left"><strong>Bit wise operators</strong></td>
+          <td style="text-align: justify">These operators are used to perform bit operations on given two variables.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>6</div></td>
+          <td style="text-align: left"><strong>Conditional (ternary) operators</strong></td>
+          <td style="text-align: justify">Conditional operators return one value if condition is true and returns another value is condition is false.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>7</div></td>
+          <td style="text-align: left"><strong>Increment/decrement operators</strong></td>
+          <td style="text-align: justify">These operators are used to either increase or decrease the value of the variable by one.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><div>8</div></td>
+          <td style="text-align: left"><strong>Special operators</strong></td>
+          <td style="text-align: justify">&amp;, *, sizeof( ) and ternary operators.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4><strong>1. Arithmetic Operators in C:</strong></h4>
+    <div>
+      <ul>
+        <li>C Arithmetic operators are used to perform mathematical calculations like addition, subtraction, multiplication, division and modulus in C programs.</li>
+      </ul>
+    </div>
+    <table width="500" border="1" cellpadding="3">
+      <tbody>
+        <tr>
+          <td style="text-align: center"><div><strong>S.no</strong></div></td>
+          <td style="text-align: center"><div><strong>Arithmetic Operators</strong></div></td>
+          <td style="text-align: center"><div><strong>Operation</strong></div></td>
+          <td style="text-align: center"><div><strong>Example</strong></div></td>
+        </tr>
+        <tr>
+          <td style="text-align: center"><div>1</div></td>
+          <td style="text-align: center"><div>+</div></td>
+          <td style="text-align: center"><div>Addition</div></td>
+          <td style="text-align: center"><div>A+B</div></td>
+        </tr>
+        <tr>
+          <td style="text-align: center"><div>2</div></td>
+          <td style="text-align: center"><div>-</div></td>
+          <td style="text-align: center"><div>Subtraction</div></td>
+          <td style="text-align: center"><div>A-B</div></td>
+        </tr>
+        <tr>
+          <td style="text-align: center"><div>3</div></td>
+          <td style="text-align: center"><div>*</div></td>
+          <td style="text-align: center"><div>multiplication</div></td>
+          <td style="text-align: center"><div>A*B</div></td>
+        </tr>
+        <tr>
+          <td style="text-align: center"><div>4</div></td>
+          <td style="text-align: center"><div>/</div></td>
+          <td style="text-align: center"><div>Division</div></td>
+          <td style="text-align: center"><div>A/B</div></td>
+        </tr>
+        <tr>
+          <td style="text-align: center"><div>5</div></td>
+          <td style="text-align: center"><div>%</div></td>
+          <td style="text-align: center"><div>Modulus</div></td>
+          <td style="text-align: center"><div>A%B</div></td>
+        </tr>
+      </tbody>
+    </table>
+    <h4><strong>Example program for C arithmetic operators:</strong></h4>
+    <ul>
+      <li>In this example program, two values &ldquo;40″ and &ldquo;20″ are used to perform arithmetic operations such as addition, subtraction, multiplication, division, modulus and output is displayed for each operation.</li>
+    </ul>
+    <div class="program">#include< stdio.h>
+int main()
+{
+int a=40,b=20, add,sub,mul,div,mod;
+add = a+b;
+sub = a-b;
+mul = a*b;
+div = a/b;
+mod = a%b;
+printf(“Addition of a, b is : %d\n”, add);
+printf(“Subtraction of a, b is : %d\n”, sub);
+printf(“Multiplication of a, b is : %d\n”, mul);
+printf(“Division of a, b is : %d\n”, div);
+printf(“Modulus of a, b is : %d\n”, mod);
+}</div>
+<h4>Output:</h4>
+<div class="output">Addition of a, b is : 60
+Subtraction of a, b is : 20
+Multiplication of a, b is : 800
+Division of a, b is : 2
+Modulus of a, b is : 0</div>
+<h4><strong>2. Assignment operators in C:</strong></h4>
+<div>
+  <ul>
+    <li>In C programs, values for the variables are assigned using assignment operators.</li>
+    <li>For example, if the value &ldquo;10″ is to be assigned for the variable &ldquo;sum&rdquo;, it can be assigned as &ldquo;sum = 10;&rdquo;</li>
+    <li>Other assignment operators in C language are given below.</li>
+  </ul>
+</div>
+<table width="900" border="1" cellpadding="3">
+  <tbody>
+    <tr>
+      <td height="33" colspan="2" style="text-align: center"><div><span data-mce-mark="1"><strong>Operators</strong></span></div></td>
+      <td width="125" style="text-align: center"><div><span data-mce-mark="1"><strong>Example</strong></span></div></td>
+      <td width="345" style="text-align: center"><div><span data-mce-mark="1"><strong>Explanation</strong></span></div></td>
+    </tr>
+    <tr>
+      <td width="287" style="text-align: center"><div>Simple assignment operator</div></td>
+      <td width="99" style="text-align: center"><div>=</div></td>
+      <td style="text-align: center"><div>sum = 10</div></td>
+      <td style="text-align: center"><div>10 is assigned to variable sum</div></td>
+    </tr>
+    <tr>
+      <td rowspan="7" style="text-align: center"><div>Compound assignment operators</div></td>
+      <td style="text-align: center"><div>+=</div></td>
+      <td style="text-align: center"><div>sum += 10</div></td>
+      <td style="text-align: center"><div>This is same as sum = sum + 10</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>-=</div></td>
+      <td style="text-align: center"><div>sum -= 10</div></td>
+      <td style="text-align: center"><div>This is same as sum = sum – 10</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>*=</div></td>
+      <td style="text-align: center"><div>sum *= 10</div></td>
+      <td style="text-align: center"><div>This is same as sum = sum * 10</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>/+</div></td>
+      <td style="text-align: center"><div>sum /= 10</div></td>
+      <td style="text-align: center"><div>This is same as sum = sum / 10</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>%=</div></td>
+      <td style="text-align: center"><div>sum %= 10</div></td>
+      <td style="text-align: center"><div>This is same as sum = sum % 10</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>&amp;=</div></td>
+      <td style="text-align: center"><div>sum&amp;=10</div></td>
+      <td style="text-align: center"><div>This is same as sum = sum &amp; 10</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>^=</div></td>
+      <td style="text-align: center"><div>sum ^= 10</div></td>
+      <td style="text-align: center"><div>This is same as sum = sum ^ 10</div></td>
+    </tr>
+  </tbody>
+</table>
+<h4><strong>Example program for C assignment operators:</strong></h4>
+<ul>
+  <li>In this program, values from 0 – 9 are summed up and total &ldquo;45″ is displayed as output.</li>
+  <li>Assignment operators such as &ldquo;=&rdquo; and &ldquo;+=&rdquo; are used in this program to assign the values and to sum up the values.</li>
+</ul>
+<div class="program">#include< stdio.h>
+int main()
+{
+int Total=0,i;
+for(i = 0;i < 10;i++)
+{
+Total+=i; // This is same as Total = Toatal+i
+}
+printf(“Total = %d”, Total);
+}</div>
+<h4>Output:</h4>
+<div class="output">Total = 45</div>
+<h4><strong>3. Relational operators in C:</strong></h4>
+<div>
+  <ul>
+    <li>Relational operators are used to find the relation between two variables. i.e. to compare the values of two variables in a C program.</li>
+  </ul>
+</div>
+<div></div>
+<div>
+  <table width="500" border="1" cellpadding="3">
+    <tbody>
+      <tr>
+        <td width="38" style="text-align: center"><div><span data-mce-mark="1"><strong>S.no</strong></span></div></td>
+        <td width="88" style="text-align: center"><div><span data-mce-mark="1"><strong>Operators</strong></span></div></td>
+        <td width="91" style="text-align: center"><div><span data-mce-mark="1"><strong>Example</strong></span></div></td>
+        <td width="239" style="text-align: center"><div><span data-mce-mark="1"><strong>Description</strong></span></div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>1</div></td>
+        <td style="text-align: center"><div>&gt;</div></td>
+        <td style="text-align: center"><div>x &gt; y</div></td>
+        <td style="text-align: center"><div>x is greater than y</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>2</div></td>
+        <td style="text-align: center"><div>&lt;</div></td>
+        <td style="text-align: center"><div>x &lt; y</div></td>
+        <td style="text-align: center"><div>x is less than y</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>3</div></td>
+        <td style="text-align: center"><div>&gt;=</div></td>
+        <td style="text-align: center"><div>x &gt;= y</div></td>
+        <td style="text-align: center"><div>x is greater than or equal to y</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>4</div></td>
+        <td style="text-align: center"><div>&lt;=</div></td>
+        <td style="text-align: center"><div>x &lt;= y</div></td>
+        <td style="text-align: center"><div>x is less than or equal to y</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>5</div></td>
+        <td style="text-align: center"><div>==</div></td>
+        <td style="text-align: center"><div>x == y</div></td>
+        <td style="text-align: center"><div>x is equal to y</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>6</div></td>
+        <td style="text-align: center"><div>!=</div></td>
+        <td style="text-align: center"><div>x != y</div></td>
+        <td style="text-align: center"><div>x is not equal to y</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4><strong>Example program for relational operators in C:</strong></h4>
+<ul>
+  <li>In this program, relational operator (==) is used to compare 2 values whether they are equal are not.</li>
+  <li>If both values are equal, output is displayed as &rdquo; values are equal&rdquo;. Else, output is displayed as &ldquo;values are not equal&rdquo;.</li>
+  <li>Note : double equal sign (==) should be used to compare 2 values. We should not single equal sign (=).</li>
+</ul>
+<div class="program">#include< stdio.h>
+int main()
+{
+int m=40,n=20;
+if (m == n)
+{
+printf(“m and n are equal”);
+}
+else
+{
+printf(“m and n are not equal”);
+}
+}</div>
+<h4>Output:</h4>
+<div class="output">m and n are not equal</div>
+<h4><strong>4. Logical operators in C:</strong></h4>
+<div>
+  <ul>
+    <li>These operators are used to perform logical operations on the given expressions.</li>
+    <li>There are 3 logical operators in C language. They are, logical AND (&amp;&amp;), logical OR (||) and logical NOT (!).</li>
+  </ul>
+</div>
+<div>
+  <table width="900" border="1" cellpadding="3">
+    <tbody>
+      <tr>
+        <td width="38" style="text-align: center"><div><strong>S.no</strong></div></td>
+        <td width="88" style="text-align: center"><div><strong>Operators</strong></div></td>
+        <td width="90" style="text-align: center"><div><strong>Name</strong></div></td>
+        <td width="144" style="text-align: center"><div><strong>Example</strong></div></td>
+        <td width="486" style="text-align: center"><div><strong>Description</strong></div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>1</div></td>
+        <td style="text-align: center"><div>&amp;&amp;</div></td>
+        <td style="text-align: center"><div>logical AND</div></td>
+        <td style="text-align: center"><div>(x&gt;5)&amp;&amp;(y&lt;5)</div></td>
+        <td style="text-align: justify"><div>It returns true when both conditions are true</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>2</div></td>
+        <td style="text-align: center"><div>||</div></td>
+        <td style="text-align: center"><div>logical OR</div></td>
+        <td style="text-align: center"><div>(x&gt;=10)||(y&gt;=10)</div></td>
+        <td style="text-align: justify"><div>It returns true when at-least one of the condition is true</div></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><div>3</div></td>
+        <td style="text-align: center"><div>!</div></td>
+        <td style="text-align: center"><div>logical NOT</div></td>
+        <td style="text-align: center"><div>!((x&gt;5)&amp;&amp;(y&lt;5))</div></td>
+        <td style="text-align: justify"><div>It reverses the state of the operand &ldquo;((x&gt;5) &amp;&amp; (y&lt;5))&rdquo;</div>
+          <div>If &ldquo;((x&gt;5) &amp;&amp; (y&lt;5))&rdquo; is true, logical NOT operator makes it false</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4> <strong>Example program for logical operators in C:</strong></h4>
+<div class="program">#include< stdio.h>
+int main()
+{
+int m=40,n=20;
+int o=20,p=30;
+if (m>n && m !=0)
+{
+printf(“&& Operator : Both conditions are true\n”);
+}
+if (o>p || p!=20)
+{
+printf(“|| Operator : Only one condition is true\n”);
+}
+if (!(m>n && m !=0))
+{
+printf(“! Operator : Both conditions are true\n”);
+}
+else
+{
+printf(“! Operator : Both conditions are true. But, status is inverted as false\n”);
+}
+}</div>
+<h4>Output:</h4>
+<div class="output">&& Operator : Both conditions are true
+|| Operator : Only one condition is true
+! Operator : Both conditions are true. But, status is inverted as false</div>
+<ul>
+  <li>In this program, operators (&amp;&amp;,|| and !) are used to perform logical operations on the given expressions.</li>
+  <li><strong>&amp;&amp; operator</strong> – &ldquo;if clause&rdquo; becomes true only when both conditions (m&gt;n and m! =0) is true. Else, it becomes false.</li>
+  <li><strong>|| Operator</strong> – &ldquo;if clause&rdquo; becomes true when any one of the condition (o&gt;p || p!=20) is true. It becomes false when none of the condition is true.</li>
+  <li><strong>! Operator</strong>  – It is used to reverses the state of the operand.</li>
+  <li>If the conditions (m&gt;n &amp;&amp; m!=0) is true, true (1) is returned. This value is inverted by &ldquo;!&rdquo; operator.</li>
+  <li>So, &ldquo;! (m&gt;n and m!=0)&rdquo; returns false (0).</li>
+</ul>
+<h4><strong>5. Bit wise operators in C</strong>:</h4>
+<div>
+  <ul>
+    <li>These operators are used to perform bit operations. Decimal values are converted into binary values which are the sequence of bits and bit wise operators work on these bits.</li>
+    <li>Bit wise operators in C language are &amp; (bitwise AND), | (bitwise OR), ~ (bitwise OR), ^ (XOR), &lt;&lt; (left shift) and &gt;&gt; (right shift).</li>
+  </ul>
+</div>
+<h4><strong>Truth table for bit wise operation</strong> <strong>Bit wise operators</strong></h4>
+<table width="800" border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td width="61" style="font-weight: bold; text-align: center;"><div>x</div></td>
+      <td width="60" style="font-weight: bold; text-align: center;"><div>y</div></td>
+      <td width="63" style="font-weight: bold; text-align: center;"><div> x|y</div></td>
+      <td width="64" style="font-weight: bold; text-align: center;"><div>x &amp; <span style="text-align: center"></span>y</div></td>
+      <td width="66" style="font-weight: bold; text-align: center;"><div>x ^ y</div></td>
+      <td width="17" style="text-align: center"></td>
+      <td width="203" style="text-align: center; font-weight: bold;"><div>Operator_symbol</div></td>
+      <td width="198" style="text-align: center; font-weight: bold;"><div>Operator_name</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"><div>&amp;</div></td>
+      <td style="text-align: center"><div>Bitwise_AND</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"><div>|</div></td>
+      <td style="text-align: center"><div>Bitwise OR</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"><div>~</div></td>
+      <td style="text-align: center"><div>Bitwise_NOT</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>0</div></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"><div>^</div></td>
+      <td style="text-align: center"><div>XOR</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"><div>&lt;&lt;</div></td>
+      <td style="text-align: center"><div>Left Shift</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"></td>
+      <td style="text-align: center"><div>&gt;&gt;</div></td>
+      <td style="text-align: center"><div>Right Shift</div></td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li>Consider x=40 and y=80. Binary form of these values are given below.</li>
+</ul>
+<p>x = 00101000<br>
+  y=  01010000</p>
+<ul>
+  <li>All bit wise operations for x and y are given below.</li>
+</ul>
+<p>x&amp;y = 00000000 (binary) = 0 (decimal)<br>
+  x|y = 01111000 (binary) = 120 (decimal)<br>
+  ~x = 11111111111111111111111111 11111111111111111111111111111111010111<br>
+  .. ..= -41 (decimal)<br>
+  x^y = 01111000 (binary) = 120 (decimal)<br>
+  x &lt;&lt; 1 = 01010000 (binary) = 80 (decimal)<br>
+  x &gt;&gt; 1 = 00010100 (binary) = 20 (decimal)</p>
+<p><strong>Note:</strong></p>
+<ul>
+  <li><strong>Bit wise NOT :</strong> Value of 40 in binary is 0000000000000000000000000000000000000000000000000010100000000000. So, all 0′s are converted into 1′s in bit wise NOT operation.</li>
+  <li><strong>Bit wise left shift and right shift :</strong> In left shift operation &ldquo;x &lt;&lt; 1 &ldquo;, 1 means that the bits will be left shifted by one place. If we use it as &ldquo;x &lt;&lt; 2 &ldquo;,  then, it means that the bits will be left shifted by 2 places.</li>
+</ul>
+<h4><strong>Example program for bit wise operators in C:</strong></h4>
+<ul>
+  <li>In this example program, bit wise operations are performed as shown above and output is displayed in decimal format.</li>
+</ul>
+<div class="program">#include< stdio.h>
+int main()
+{
+	int m = 40,n = 80,AND_opr,OR_opr,XOR_opr,NOT_opr ;
+	AND_opr = (m&n);
+	OR_opr = (m|n);
+	NOT_opr = (~m);
+	XOR_opr = (m^n);
+	printf(“AND_opr value = %d\n”,AND_opr );
+	printf(“OR_opr value = %d\n”,OR_opr );
+	printf(“NOT_opr value = %d\n”,NOT_opr );
+	printf(“XOR_opr value = %d\n”,XOR_opr );
+	printf(“left_shift value = %d\n”, m << 1);
+	printf(“right_shift value = %d\n”, m >> 1);
+}</div>
+<h4>Output:</h4>
+<div class="output">AND_opr value = 0
+OR_opr value = 120
+NOT_opr value = -41
+XOR_opr value = 120
+left_shift value = 80
+right_shift value = 20</div>
+<h4><strong>6. Conditional or ternary operators in C:</strong></h4>
+<div>
+  <ul>
+    <li>Conditional operators return one value if condition is true and returns another value is condition is false.</li>
+    <li>This operator is also called as ternary operator.</li>
+  </ul>
+</div>
+<div class="syntax">Syntax:	(Condition? true_value: false_value);
+Example :        (A &gt; 100  ?  0  :  1);</div>
+<div>
+  In above example, if A is greater than 100, 0 is returned. Else 1 is returned. This is equal to if else conditional statements.
+</div>
+<h4><strong>Example program for conditional/ternary operators in C:</strong></h4>
+<div class="program">#include< stdio.h>
+int main()
+{
+	int x=1, y ;
+	y = ( x ==1 ? 2 : 0 ) ;
+	printf(“x value is %d\n”, x);
+	printf(“y value is %d”, y);
+}</div>
+<h4>Output:</h4>
+<div class="output">x value is 1
+y value is 2</div>
+<h3>7. Increment/decrement Operators</h3>
+<div>
+  <ul>
+    <li>Increment operators are used to increase the value of the variable by one and decrement operators are used to decrease the value of the variable by one in C programs.</li>
+  </ul>
+  <div class="syntax">Syntax:			Increment operator: ++var_name; (or) var_name++;
+Decrement operator:	 – -var_name; (or) var_name – -;
+Example:		Increment operator :  ++ i ;    i ++ ;
+Decrement operator :	- – i ;   i – - ;</div>
+
+<h4><strong>Example program <strong>for increment operators in C</strong>:</strong></h4>
+<ul>
+  <li>In this program, value of &ldquo;i&rdquo; is incremented one by one from 1 up to 9 using &ldquo;i++&rdquo; operator and output is displayed as &ldquo;1 2 3 4 5 6 7 8 9&rdquo;.</li>
+</ul>
+<div class="program">#inlcude< stdio.h>
+int main()
+{
+	int i-1;
+	while(i<10)
+	{
+		printf("%d ",i);
+		i++;
+	}
+}</div>
+<h4>Output:</h4>
+<div class="output">1 2 3 4 5 6 7 8 9</div>
+<h4><strong>Example program <strong>for <strong>decrement </strong>operators in C</strong>:</strong></h4>
+<ul>
+  <li>In this program, value of &ldquo;I&rdquo; is decremented one by one from 20 up to 11 using &ldquo;i–&rdquo; operator and output is displayed as &ldquo;20 19 18 17 16 15 14 13 12 11&rdquo;.</li>
+</ul>
+<div class="program">#include< stdio.h>
+int main()
+{
+	int i-20;
+	while(i>10)
+	{
+		printf("%d ",i);
+		i--;
+	}
+}</div>
+<h4>Output:</h4>
+<div class="output">20 19 18 17 16 15 14 13 12 11</div>
+<h4><strong>Difference between pre/post increment &amp; decrement operators in C:</strong></h4>
+  <ul>
+    <li>Below table will explain the difference between pre/post increment and decrement operators in C.</li>
+  </ul>
+<table width="750" border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td width="40" style="text-align: center"><div><span data-mce-mark="1"><strong>S.no</strong></span></div></td>
+      <td width="132" style="text-align: center"><div><span data-mce-mark="1"><strong>Operator type</strong></span></div></td>
+      <td width="75" style="text-align: center"><div><span data-mce-mark="1"><strong>Operator</strong></span></div></td>
+      <td width="467" style="text-align: center"><div><span data-mce-mark="1"><strong>Description</strong></span></div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center">Pre increment</td>
+      <td style="text-align: center">++i<span data-mce-mark="1"><br>
+      </span></td>
+      <td>Value of i is incremented before assigning it to variable i.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>2</div></td>
+      <td style="text-align: center">Post-increment</td>
+      <td style="text-align: center">i++<span data-mce-mark="1"><br>
+      </span></td>
+      <td>Value of i is incremented after assigning it to variable i.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>3</div></td>
+      <td style="text-align: center">Pre decrement</td>
+      <td style="text-align: center">– –i<span data-mce-mark="1"><br>
+      </span></td>
+      <td>Value of i is decremented before assigning it to variable i.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>4</div></td>
+      <td style="text-align: center">Post_decrement</td>
+      <td style="text-align: center">i– –<span data-mce-mark="1"><br>
+      </span></td>
+      <td>Value of i is decremented after assigning it to variable i.</td>
+    </tr>
+  </tbody>
+</table>
+<h3><strong>8. Special Operators in C:</strong></h3>
+<div>
+  <ul>
+    <li>Below are some of special operators that C language offers.</li>
+  </ul>
+</div>
+<div></div>
+<table width="700" border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td style="text-align: center"><div><strong><span data-mce-mark="1"> S.no</span></strong></div></td>
+      <td style="text-align: center"><div><strong><span data-mce-mark="1">Operators</span></strong></div></td>
+      <td style="text-align: center"><div><strong><span data-mce-mark="1">Description</span></strong></div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>1</div></td>
+      <td style="text-align: center"><div>&amp;</div></td>
+      <td><div>This is used to get the address of the variable.</div>
+        <div>Example : &amp;a will give address of a.</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>2</div></td>
+      <td style="text-align: center"><div>*</div></td>
+      <td><div>This is used as pointer to a variable.</div>
+        <div>Example : * a  where, * is pointer to the variable a.</div></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><div>3</div></td>
+      <td style="text-align: center"><div>Sizeof ()</div></td>
+      <td><div>This gives the size of the variable.</div>
+        <div>Example : size of (char) will give us 1.</div></td>
+    </tr>
+  </tbody>
+</table>
+<h4><strong>Example program for &amp; and * operators in C:</strong></h4>
+<ul>
+  <li>In this program, &ldquo;&amp;&rdquo; symbol is used to get the address of the variable and &ldquo;*&rdquo; symbol is used to get the value of the variable that the pointer is pointing to. Please refer <a title="Pointer" href="pointers.html"><strong>Pointer</strong></a> topic to know more about pointers.</li>
+</ul>
+<div class="program">#include< stdio.h>
+int main()
+{
+	int *ptr, q;
+	q = 50;
+	/* address of q is assigned to ptr */
+	ptr = &q;
+	/* display q’s value using ptr variable */
+	printf(“%d”, *ptr);
+	return 0;
+}</div>
+<h4>Output:</h4>
+<div class="output">50</div>
+<h4><strong>Example program for sizeof() operator in C:</strong></h4>
+<ul>
+  <li>sizeof() operator is used to find the memory space allocated for each C data types.</li>
+</ul>
+<div class="program">#include< stdio.h>
+int main()
+{
+	int a;
+	char b;
+	float c;
+	double d;
+	printf(“Storage size for int data type:%d \n”,sizeof(a));
+	printf(“Storage size for char data type:%d \n”,sizeof(b));
+	printf(“Storage size for float data type:%d \n”,sizeof(c));
+	printf(“Storage size for double data type:%d\n”,sizeof(d));
+	return 0;
+}</div>
+<h4>Output:</h4>
+<div class="output">Storage size for int data type:4
+Storage size for char data type:1
+Storage size for float data type:4
+Storage size for double data type:8</div>
+</div>
+  <div id="Footer">
+  	<ul>
+    	<li><a href="Variables.html"><</a></li>
+        <li><a href="PrintfAndScanfFunctions.html">1</a></li>
+        <li><a href="DataTypes.html">2</a></li>
+        <li><a href="Constants.html">3</a></li>
+        <li><a href="Variables.html">4</a></li>
+        <li><a href="OperatorsAndExpressions.html">5</a></li>
+        <li><a href="DecisionControlStatements.html">6</a></li>
+        <li><a href="LoopControlStatements.html">7</a></li>
+        <li><a href="CaseControlStatements.html">8</a></li>
+        <li><a href="Arrays.html">9</a></li>
+        <li><a href="String.html">10</a></li>
+        <li><a href="Pointers.html">11</a></li>
+        <li><a href="Functions.html">12</a></li>
+        <li><a href="Structures.html">13</a></li>
+        <li><a href="DecisionControlStatements.html">></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

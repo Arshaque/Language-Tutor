@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Printf And Scanf Functions</title>
+<link rel="stylesheet" type="text/css" href="../../CSS/css.css">
+</head>
+<body>
+<div id="Container">
+  <div id="Header"><img src="../../Logo/Logo.png" alt="Logo" width="103" height="103" title="Logo"/><img id="titile" src="../../Logo/title.png" width="796" height="110" alt="Title"/></div>
+  <div id="cssmenu">
+<ul>
+   <li><a href="../welcome.html"><span>Welcome</span></a></li>
+   <li class="active has-sub"><a href="#.html"><span>Account</span></a>
+     <ul>
+       <li class="has-sub"><a href="#.html"><span>Profile</span></a></li>
+        <li class="has-sub"><a href="#.html"><span>Settings</span></a></li>
+    </ul>
+   </li>
+   <li class="active has-sub"><a href="#"><span>Learn C</span></a>
+      <ul>
+         <li class="has-sub"><a href="../Basics.html"><span>Basics</span></a></li>
+         <li class="has-sub"><a href="../Topics.html"><span>Topics</span></a></li>
+         <li class="has-sub"><a href="#.html"><span>Questions</span></a></li>
+      </ul>
+   </li>
+    <li class="last"><a href="../Contacts.html"><span>Contact</span></a></li>
+   <li class="last"><a href="#"><span>Log Out</span></a></li>
+</ul>
+</div>
+  <div id="Content">
+  <h1 style="text-align:center;">Printf And Scanf Functions</h1>
+  	<ul>
+  	  <li>printf() and scanf() functions are inbuilt library functions in C which are available in C library by default. These functions are declared and related macros are defined in &ldquo;stdio.h&rdquo; which is a header file.</li>
+  	  <li>We have to include &ldquo;stdio.h&rdquo; file as shown in below C program to make use of these printf() and scanf() library functions.</li>
+    </ul>
+  	<h4><strong>	C printf() function:<br>
+    </strong></h4>
+  	<ul>
+  	  <li>printf() function is used to print the &ldquo;character, string, float, integer, octal and hexadecimal values&rdquo; onto the output screen.</li>
+  	  <li>We use printf() function with %d format specifier to display the value of an integer variable.</li>
+  	  <li>Similarly %c is used to display character, %f for float variable, %s for string variable, %lf for double and %x for hexadecimal variable.</li>
+  	  <li>To generate a newline,we use &ldquo;\n&rdquo; in C printf() statement.</li>
+    </ul>
+  	<p><strong>Note:</strong></p>
+  	<ul>
+  	  <li>C language is case sensitive. For example, printf() and scanf() are different from Printf() and Scanf(). All characters in printf() and scanf() functions must be in lower case.</li>
+    </ul>
+  	<h4><strong>Example program for C printf() function:</strong></h4>
+    <div class="program">#include&lt;stdio.h&gt;
+int main()
+{
+	char ch = ‘A’;
+	char str[20] = “sgmlanguagetutor.edu”;
+	float flt = 10.234;
+	int no = 150;
+	double dbl = 20.123456;
+	printf(“Character is %c \n”, ch);
+	printf(“String is %s \n” , str);
+	printf(“Float value is %f \n”, flt);
+	printf(“Integer value is %d\n” , no);
+	printf(“Double value is %lf \n”, dbl);
+	printf(“Octal value is %o \n”, no);
+	printf(“Hexadecimal value is %x \n”, no);
+	return 0;
+}         
+    </div>
+    <p><strong>Output:</strong></p>
+    <div class="output">Character is A
+String is sgmlanguagetutor.edu
+Float value is 10.234000
+Integer value is 150
+Double value is 20.123456
+Octal value is 226
+Hexadecimal value is 96</div>
+    <p>You can see the output with the same data which are placed within the double quotes of printf statement in the program except</p>
+    <ul>
+      <li>%d got replaced by value of an integer variable  (no),</li>
+      <li>%c got replaced by value of a character variable  (ch),</li>
+      <li>%f got replaced by value of a float variable  (flt),</li>
+      <li>%lf got replaced by value of a double variable  (dbl),</li>
+      <li>%s got replaced by value of a string variable  (str),</li>
+      <li>%o got replaced by a octal value corresponding to integer variable  (no),</li>
+      <li>%x got replaced by a hexadecimal value corresponding to integer variable</li>
+      <li>\n got replaced by a newline.</li>
+    </ul>
+    <h4><strong>C scanf() function:</strong></h4>
+    <ul>
+      <li>scanf() function is used to read character, string, numeric data from keyboard</li>
+      <li>Consider below example program where user enters a character. This value is assigned to the variable &ldquo;ch&rdquo; and then displayed.</li>
+      <li>Then, user enters a string and this value is assigned to the variable &rdquo;str&rdquo; and then displayed.</li>
+    </ul>
+    <h4><strong>Example program for printf() and scanf() functions in C:</strong></h4>
+    <div class="program">#include &lt;stdio.h&gt;
+int main()
+{
+	char ch;
+	char str[100];
+	printf(&ldquo;Enter any character \n&rdquo;);
+	scanf(&ldquo;%c&rdquo;, &amp;ch);
+	printf(&ldquo;Entered character is %c \n&rdquo;, ch);
+	printf(&ldquo;Enter any string ( upto 100 character ) \n&rdquo;);
+	scanf(&ldquo;%s&rdquo;, &amp;str);
+	printf(&ldquo;Entered string is %s \n&rdquo;, str);
+}
+    </div>
+    <strong>Output:</strong>
+    <div class="output">Enter any character
+a
+Entered character is a
+Enter any string ( upto 100 character )
+hai
+Entered string is hai</div>
+    <ul>
+      <li>The format specifier %d is used in scanf() statement. So that, the value entered is received as an integer.
+        <ul>
+          <li>%c for character variable  (ch),</li>
+          <li>%f for float variable  (flt),</li>
+          <li>%lf for double variable  (dbl),</li>
+          <li>%s for string variable  (str),</li>
+        </ul>
+      </li>
+      <li>Ampersand(&amp;) is used before variable name &ldquo;ch&rdquo; in scanf() statement as &amp;ch.
+        <ul>
+          <li>It is just like in a pointer which is used to point to the variable.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="Footer">
+  	<ul>
+    	<li><a href="#"><</a></li>
+        <li><a href="PrintfAndScanfFunctions.html">1</a></li>
+        <li><a href="DataTypes.html">2</a></li>
+        <li><a href="Constants.html">3</a></li>
+        <li><a href="Variables.html">4</a></li>
+        <li><a href="OperatorsAndExpressions.html">5</a></li>
+        <li><a href="DecisionControlStatements.html">6</a></li>
+        <li><a href="LoopControlStatements.html">7</a></li>
+        <li><a href="CaseControlStatements.html">8</a></li>
+        <li><a href="Arrays.html">9</a></li>
+        <li><a href="String.html">10</a></li>
+        <li><a href="Pointers.html">11</a></li>
+        <li><a href="Functions.html">12</a></li>
+        <li><a href="Structures.html">13</a></li>
+        <li><a href="DataTypes.html">></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
